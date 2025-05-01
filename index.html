@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--fuck-->
+
+
+
+    
+  
+  
+  
+  <meta charset="UTF-8">
+
+
+
+
+    
+  
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+    
+  
+  
+  
+  <style>
+        body {
+            font-family: "MS PGothic", sans-serif;
+            background: url("https://media1.tenor.com/m/WRYl7BJuqjMAAAAd/pmd-pokemon-mystery-dungeon.gif");
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 1024px;
+            max-width: 1024px;
+            margin: 20px auto;
+            border: 9px double ##120926;
+            background: url("");
+           background-size: 12%;
+           position: relative;
+           box-shadow: 5px 7px 16px 3px rgba(0,48,217,0.2);
+-webkit-box-shadow: 5px 7px 16px 3px rgba(0,48,217,0.2);
+-moz-box-shadow: 5px 7px 16px 3px rgba(0,48,217,0.2);
+        }
+
+       .banner {
+    background: url("https://static.zerochan.net/Giratina.full.396552.jpg") center center;
+    height: 233px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+     --y-position: 35%; /* default is centered. modify this if you want to move your banner image up or down. */
+    background-position: center var(--y-position);
+    border-bottom: 3px solid ##120926;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    z-index: -1;
+}
+        .content {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .main-content, .side-content {
+            border: 3px inset ##321f5c;
+            padding: 20px;
+            background-color: ##321f5c;
+            box-shadow: 2px 1px 45px -12px rgba(0,48,217,0.16) inset;
+-webkit-box-shadow: 2px 1px 45px -12px rgba(0,48,217,0.16) inset;
+-moz-box-shadow: 2px 1px 45px -12px rgba(0,48,217,0.16) inset;
+        }
+
+        .main-content {
+            width: 640px;
+            padding: 11px;
+        }
+      
+      .main-content h3, h2 {
+        color: ##321f5c;
+        font-size: 1.3em;
+        margin-top: 11px;
+      }
+      
+      .main-content p {
+        font-size: 1.1em;
+        color: ##321f5c;
+        line-height: 1.3em;
+      }
+      
+      .main-content a {
+        text-decoration: underline;
+        color: ##321f5c;
+      }
+      
+      .main-content li {
+        list-style-image: url("https://64.media.tumblr.com/e10729e18355ffb63a9487fbccf654bc/c5e516b88dce7159-d1/s75x75_c1/05b707f40897673e8f8e208a9ea90046247a87a8.gifv");
+        margin-right: 20px;
+        font-size: 1.1em;
+        color: ##321f5c;
+      }
+
+        .side-content {
+            width: 290px;
+            padding: 9px;
+        }
+
+
+        .navigation {
+            margin-top: 10px;
+            padding: 3px;
+        }
+
+        .navigation a {
+            display: block;
+            color: ##321f5c;
+            text-decoration: none;
+            font-size: 1.6em;
+            margin: 12px 0;
+        }
+
+        .navigation a:hover {
+            text-decoration: underline;
+            font-style: italic;
+        }
+
+        .update-log {
+            margin-top: 20px;
+            padding: 10px;
+            margin-left: 321px;
+            background-color: #d6e4f6;
+            height: 100px;
+            border: 3px inset #b8cbe6;
+            overflow-y: auto;
+            box-shadow: 2px 1px 45px -12px rgba(0,48,217,0.16) inset;
+-webkit-box-shadow: 2px 1px 45px -12px rgba(0,48,217,0.16) inset;
+-moz-box-shadow: 2px 1px 45px -12px rgba(0,48,217,0.16) inset;
+        }
+      
+      .update-log h3 {
+        color: #001f4a;
+        font-size: 1.3em;
+        margin-top: 11px;
+      }
+      
+      .update-log li {
+        color: #0058d4;
+        margin-right: 39px;
+        line-height: 21px;
+        list-style-image: url("https://64.media.tumblr.com/ad71aef0feb5fb32e287e5e266a4df4b/c5e516b88dce7159-8d/s75x75_c1/f84f7f1b7f2c9b99c44860cad40952cd5ddaa339.gifv");
+      }
+
+        .update-log::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .update-log::-webkit-scrollbar-thumb {
+            background-color: #5b8cc1;
+            border-radius: 3px;
+        }
+      
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #5b8cc1;
+            border-radius: 3px;
+        }
+
+        .footer {
+            background-color: #bfdaff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            color: #25518f;
+        }
+
+        /* decorative images: positioned relative to the container. you can change the images here or add more. just make sure your pictures have transparent backgrounds! */
+        .decorative-image {
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: 1000;
+        }
+
+        .top-left {
+            top: 90px;
+            left: -70px;
+            background-image: url('');
+            width: 244px;
+            height: 166px;
+            transform: rotate(346deg);
+        }
+
+        .bottom-right {
+            bottom: -30px;
+            right: -189px;
+            background-image: url('');
+            width: 320px;
+            height: 340px;
+            transform: rotate(11deg);
+        }
+
+        .top-right {
+            top: 166px;
+            right: -87px;
+            background-image: url('');
+            width: 220px;
+            height: 140px;
+            transform: rotate(11deg);
+        }
+
+    </style>
+</head>
+
+
+<body style="color: rgb(0, 0, 0);" alink="##321f5c" link="#0000ee" vlink="#551a8b">
+
+
+
+
+    
+<div class="container">
+	<!-- Decorative Images -->
+        
+<div class="decorative-image top-left"></div>
+
+<br>
+
+<div class="decorative-image top-right"></div>
+
+
+
+
+        
+<div class="banner">
+        </div>
+
+
+
+
+
+        
+<div class="content">
+            
+<div class="main-content">
+              
+<h3 style="color: rgb(102, 0, 0);">A former NEET in a strange world</h3>
+
+
+
+
+                
+<p style="color: rgb(0, 0, 0);">Hi there. I'm Sarah and I'm 23 years old...I don't know how else to
+describe myself other than being into Japanese culture since I was 12.
+(I don't really like sharing info about myself online, but I kind of
+have to since the internet is changing so much and I'm nowhere near the
+youngest online anymore, for better or worse.)</p>
+
+
+
+<p style="color: rgb(0, 0, 0);"> Slowly stopped using social media after 2018, not the biggest fan.
+But I came back online, because all my friends moved on after highschool. I have
+stayed even more offline since 2020 and I really want to change that
+somehow. (Am I supposed to put my race here, I'm Asian....(not east
+asian.....well now you already know :c)</p>
+
+
+
+
+              
+<ul style="color: rgb(0, 0, 0);">
+
+
+
+
+                <li>Games I really like: Megaten, Rune Factory, Pokemon up to gen 6 (Mystery Dungeon &amp; Ranger spinoffs).</li>
+
+
+
+
+                <li>I mostly listen
+to Japanese music now, but in the past I've had many different music
+phases. I don't use sites like RYM anymore, but I did like vaporwave,
+rap, etc. as a teenager before circling back to Jrock..</li>
+
+
+
+
+                <li>I don't
+read a whole lot now, but I used to love A Series of Unfortunate Events
+and Cinder. The manga I'm currently reading is Shoulder A Coffin Kuro. </li>
+
+
+
+
+              
+</ul>
+
+
+
+
+                
+<p style="color: rgb(0, 0, 0);">I have many interests, such as tokusatsu, visual kei, JRPGs, etc. I
+have very recently gotten back into Pokemon despite being a few gens
+behind ^^; I truly hope to seek out people who also grew up with gen 4
+&amp; 5. I also tend to either be too quiet or too chatty in my own
+words. I've started rediscovering and discovering new interests, which
+has been cheerful as it is sad.</p>
+
+
+
+
+            </div>
+
+
+
+
+            
+<div class="side-content">
+                
+<div class="navigation">
+                    
+<h2><big><span style="color: rgb(102, 0, 0);">Links</span></big></h2>
+
+<small><a href="https://github.com/kirigaku">Github</a><a href="https://www.last.fm/user/snakedlows">Last.fm</a><a href="https://backloggd.com/u/Kirihitsugi/">Backloggd</a><a href="https://www.youtube.com/@kirihitsugi">YouTube</a></small>
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+
+        
+<div class="content">
+            
+<div class="main-content">
+                
+<h2><big><span style="color: rgb(102, 0, 0);">(╥﹏╥)</span></big></h2>
+
+
+
+
+                
+<p style="color: rgb(0, 0, 0);">My favorite bandmen ever are Reita and Kyo (they are both amazing
+and beautiful men who I feel impacted by, personality and music wise).
+I also like Kaito from Wizard (I think he has a really nice smile), Aki
+from Laputa, and Hizumi ex. D&rsquo;espairsray. I'm also a big Sugizo
+fangirl now too.&nbsp;I try to upload Visual Kei stuff on my YT channel
+from things that I have bought/songs that are not easily online. I
+never felt compelled to start being active online again (my horrible
+personal life irl) until I saw that jrock (or just vkei) had an active
+community online. I went most of my teen years being shamed for liking
+Japanese things so I continued being offline/in other communities until
+recently. I'm happy that it's not a thing of the past though now.</p>
+
+
+
+
+            </div>
+
+
+
+
+            
+<div class="main-content">
+                
+<h2 style="color: rgb(102, 0, 0);">Contact</h2>
+
+
+
+
+                
+<p style="color: rgb(0, 0, 0);">I currently don't use Discord for a variety of reasons. So if you're
+interested in contacting me you'll have to do it through last.fm or
+Protonmail. (kohry@protonmail), sorry. I had a bunch of accounts on
+forums, etc. but the three I've linked are ones that I check
+frequently.&nbsp;</p>
+
+
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+
+        
+<div class="content">
+            
+<div class="update-log">
+                
+<h3><span style="color: rgb(51, 0, 51);">Current thoughts</span></h3>
+
+
+
+
+              
+<ul style="color: rgb(51, 0, 51);">
+
+  <small>
+
+
+                </small><li style="color: rgb(51, 0, 51);"><small><small><small><small><small><small><small><small>4/24/25: I've
+forgotten to update this portion. So yeah....It's April. You know what
+that means. ;-; On a side note...I've deleted my Reddit account. For
+those of you who don't know, I used it primarily for toku/vkei stuff
+but I mainly made it to connect more with other sixth guns after last
+April happened. I ended up deleting it because in all honesty, I wanted
+to see more trauma stories from other people who went through very
+fucked up things like I did, but somehow jrock was able to really help
+them. Instead, what I got was just glorified instagram with people
+posting pictures all the time. As time went on, that made me feel even
+more alone. But I tried convincing myself otherwise. Also someone who
+did something very touching for me ended up deleting her account (won't
+get into details), and I felt like I was done. I didn't really make any
+friends on there, and reddit has far more shitty stuff on there than
+good things (I don't like the popular parts of it either.) I don't
+think it's necessary for me to have an account on there as of now.</small></small></small></small></small></small></small></small></li>
+
+  <small></small>
+</ul>
+
+
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+
+        
+<div style="background-color: rgb(255, 204, 204);" class="footer"><span style="color: rgb(255, 0, 0);">
+            "Your soul will always be next to mine..."</span> </div>
+
+
+
+
+    </div>
+
+
+
+
+</body>
+</html>
