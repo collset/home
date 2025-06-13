@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- this is a free template made by tiramisu from electric-tenshi! do not remove the credit in the footer. all images used in this layout are not mine.-->
+
+
+    
+  
+  
+  <meta charset="UTF-8">
+
+
+
+    
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    
+  
+  
+  
+  
+  
+  <title>Shining Blue</title>
+  <link rel="icon" type="image/x-icon" href="https://64.media.tumblr.com/1c635fe5fd8595d62d4b9aa6944be365/c5e516b88dce7159-21/s75x75_c1/51decc1b8a88d06542b1b4ff32c01453234965fe.gifv">
+
+
+
+    
+  
+  
+  <style>
+        body {
+            font-family: "MS PGothic", sans-serif;
+            background: url("https://files.catbox.moe/2zj6x7.gif");
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 1024px;
+            max-width: 1024px;
+            margin: 20px auto;
+            border: 9px double #87e1ff;
+            background: url("https://64.media.tumblr.com/b9a5b762edb81670ce011be6a58e480a/tumblr_inline_mvmuledGjd1qid2nw.png");
+           background-size: 12%;
+           position: relative;
+           box-shadow: 5px 7px 16px 3px rgba(0,48,217,0.2);
+-webkit-box-shadow: 5px 7px 16px 3px rgba(0,48,217,0.2);
+-moz-box-shadow: 5px 7px 16px 3px rgba(0,48,217,0.2);
+        }
+
+       .banner {
+    background: url("https://images4.alphacoders.com/837/83726.jpg") center center;
+    height: 233px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+     --y-position: 35%; /* default is centered. modify this if you want to move your banner image up or down. */
+    background-position: center var(--y-position);
+    border-bottom: 3px solid #073c87;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    z-index: -1;
+}
+        .content {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .main-content, .side-content {
+            border: 3px inset #b8cbe6;
+            padding: 20px;
+            background-color: #e8effb;
+            box-shadow: 2px 1px 45px -12px rgba(0,48,217,0.16) inset;
+-webkit-box-shadow: 2px 1px 45px -12px rgba(0,48,217,0.16) inset;
+-moz-box-shadow: 2px 1px 45px -12px rgba(0,48,217,0.16) inset;
+        }
+
+        .main-content {
+            width: 840px;
+            padding: 11px;
+        }
+      
+      .main-content h3, h2 {
+        color: #001f4a;
+        font-size: 1.3em;
+        margin-top: 1px;
+      }
+      
+      .main-content p {
+        font-size: 1.1em;
+        color: #0054c9;
+        line-height: 1.3em;
+      }
+      
+      .main-content a {
+        text-decoration: underline;
+        color: #f00232;
+      }
+      
+      .main-content li {
+        list-style-image: url("https://64.media.tumblr.com/e10729e18355ffb63a9487fbccf654bc/c5e516b88dce7159-d1/s75x75_c1/05b707f40897673e8f8e208a9ea90046247a87a8.gifv");
+        margin-right: 20px;
+        font-size: 1.1em;
+        color: #007ca6;
+      }
+
+        .side-content {
+            width: 290px;
+            padding: 9px;
+        }
+
+
+        .navigation {
+            margin-top: 10px;
+            padding: 3px;
+        }
+
+        .navigation a {
+            display: block;
+            color: #0016bf;
+            text-decoration: none;
+            font-size: 1.6em;
+            margin: 12px 0;
+        }
+
+        .navigation a:hover {
+            text-decoration: underline;
+            font-style: italic;
+        }
+
+        .update-log {
+            margin-top: 20px;
+            padding: 10px;
+            margin-left: 321px;
+            background-color: #d6e4f6;
+            height: 100px;
+            border: 3px inset #b8cbe6;
+            overflow-y: auto;
+            box-shadow: 2px 1px 45px -12px rgba(0,48,217,0.16) inset;
+-webkit-box-shadow: 2px 1px 45px -12px rgba(0,48,217,0.16) inset;
+-moz-box-shadow: 2px 1px 45px -12px rgba(0,48,217,0.16) inset;
+        }
+      
+      .update-log h3 {
+        color: #001f4a;
+        font-size: 1.3em;
+        margin-top: 11px;
+      }
+      
+      .update-log li {
+        color: #0058d4;
+        margin-right: 39px;
+        line-height: 21px;
+        list-style-image: url("https://64.media.tumblr.com/ad71aef0feb5fb32e287e5e266a4df4b/c5e516b88dce7159-8d/s75x75_c1/f84f7f1b7f2c9b99c44860cad40952cd5ddaa339.gifv");
+      }
+
+        .update-log::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .update-log::-webkit-scrollbar-thumb {
+            background-color: #5b8cc1;
+            border-radius: 3px;
+        }
+      
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #5b8cc1;
+            border-radius: 3px;
+        }
+
+        .footer {
+            background-color: #bfdaff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            color: #25518f;
+        }
+
+        /* decorative images: positioned relative to the container. you can change the images here or add more. just make sure your pictures have transparent backgrounds! */
+        .decorative-image {
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: 1000;
+        }
+
+        .top-left {
+            top: 90px;
+            left: -70px;
+            background-image: url('https://64.media.tumblr.com/cae6de8fdf0b20cdbd3701323c86e118/b5eae332efd3e6aa-9b/s100x200/511edd0320192664b2ce9144de95b54980010f01.pnj');
+            width: 244px;
+            height: 166px;
+            transform: rotate(346deg);
+        }
+
+        .bottom-right {
+            bottom: -30px;
+            right: -189px;
+            background-image: url('https://64.media.tumblr.com/b69cad3dfd0a76c0e57bc6bf97812e24/565e6b98159a2376-04/s250x400/817915090c662cfe5b3a22c82ed17067f747533f.pnj');
+            width: 320px;
+            height: 340px;
+            transform: rotate(11deg);
+        }
+
+        .top-right {
+            top: 166px;
+            right: -87px;
+            background-image: url('https://64.media.tumblr.com/888a17a6b602d8e336097842f4fb7969/71ed9801afa737be-d7/s250x400/1d2a4cfb17c1b346d1ae1100174f9573048ef774.pnj');
+            width: 220px;
+            height: 140px;
+            transform: rotate(11deg);
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+
+    
+<div class="container">
+	<!-- Decorative Images -->
+        
+<div class="decorative-image top-left"></div>
+
+
+
+        
+<div class="decorative-image bottom-right"></div>
+
+
+
+        
+<div class="decorative-image top-right"></div>
+
+
+
+        
+<div class="banner">
+        </div>
+
+
+
+            
+<div class="main-content">
+                
+<h2>Blog</h2>
+
+
+
+                
+<p>I've decided to put my writings here. Most of them will be imported
+from Wordpress. I feel some of it may be useful information, but they
+are still personal posts so keep that in mind when using it
+for.....something. Older posts may be written for convienence (also cuz its common sense
+    to leave stuff out :o) </p>
+
+
+
+            </div>
+
+
+
+        
+<div class="content">
+            
+<div class="main-content">
+              
+<h3>im back temporarily @ 9:31 pm 6/1/25</h3>
+
+
+
+                
+              
+<p> &nbsp; <small>Hey so I'm back. Except it's because something
+happened. An archived jrock forum that I used to lurk recently got
+taken down, which caused it to go private.
+It's sad because I spent a very large chunk of 2024 just sinking my
+teeth into browsing that forum. I would always end up there when I had
+a very curious question about something I didn't know. Like Satsuki,
+Kisaki, things about their character. Or even the old threads of
+bandmen that have passed that are remembered to this day, like Daisuke
+Ochida and Isshi of Kagrra.&nbsp;</small></p>
+
+
+<p><small>I think I spent the whole summer last year, reading that
+forum. And you know what? I really enjoyed it. Because, reading that
+forum, even meaningless topics like random thoughts reminded me of how
+much calmer things used to be. Or before everything became what it was
+now. For those who do not know, I spent my years on Tumblr mostly. So I
+know that things were not always like this.
+That aside, I went through my internet history today. And I found this
+screenshot: From April and May.
+So even during the last two months, I was still stumbling upon and
+lurking MH. In recent times, (most of April, March, and most of May), I
+didn't lurk there too much. But, I did have tabs on my phone of MH. The
+reason I ended up finding out today was because I became sick of the
+internet feed that everyone is so used to in 2020. Then I remembered MH
+existed (again), and then I tried opening a tab on my phone, only to be
+met with login. I felt anxious, then I read the recent post on the new
+forum.
+................</small></p>
+
+
+<p><small>&nbsp; I feel as though this is a subtle (or not so subtle)
+way of telling me to lurk Japanese sites more, like Tanuki.
+Except.....I feel that bangya on there are probably not as nice to
+2010s (and after) bandmen and after. I've not been on there, but from
+what I heard it seems to be the case. Also, I'm in no mood to hear
+others talk shit right now. I've been somewhat burnt out, (April and
+May have been sad for fans of a certain band everyone knows...) so it's
+why I haven't been able to lurk the forum as much as before.
+That said, I don't even know who or what could've sent a strike to the
+site. I'm blaming myself stupidly bc my youtube and new forum have the
+same icon. But....I don't really post mega links/torrents anywhere?
+I've thought about it, but now I feel like it's not good to do it
+anymore. I may post mega links on last.fm like someone did with
+avelcain. (Btw I have never posted piracy links at all, I tried waiting
+for the right opportunity and that never came.)&nbsp;</small></p>
+
+
+<p><small>&nbsp; Yeah, to be more personal I am stressed. His passing,
+can't beat cave story, my life isn't like most people's (those that can
+do anything without anyone stopping them irl). That kind of thing. Of
+course, coffee would make it worse. Of course.
+But i did not know that the site isn't visible anymore...
+It was a good site for old news, and I did like the atmosphere there,
+especially since it was more forumlike and less....social media-y? I
+don't know. I think I just like to lurk and it's good when you listen
+to lesser known bands and you need info.
+Also, I tried hard if there was any other way to access the site. I
+tried seeing if I could view the Lycaon thread (since it was on my
+phone unread), and I couldn't.
+Also, the Gazette thread on MH was how I found out that the drums in
+Taion, or just Traces Vol. 2 were fake. Apparently Kai couldn't play at
+the time (maybe it was an accident), but that led to Aoi putting the
+drums in himself through FL Studio or Piapro (or whatever the hell they
+were using). After finding this out though, I kind of can't really
+listen to the Taion remake lol, the fake drums are most obvious in DLN.
+I liked that the thread had good critiscim of them, and not the typical
+fangirl stuff that you would've found for the band around 2017-18.
+Because around that time only diehard fans were following them a lot,
+which isn't bad, but there wasn't much discussion for how the music was
+made/the musical direction itself. Will miss that thread, even though I
+believe I also read the whole thing.
+There was also a chart of how the vkei label industry works, like how
+Free-Will apparently runs most of the (scene?) and maybe connections to
+yakuza? Idk, but I also did not save it.
+Knew the forum was gonna die, but didn't think it was that soon. Shit
+came out of nowhere. So much shit irl for me and I wish I had spent
+more of that time lurking the forum, even though that's literally all I
+did for 2024.
+SMH my head&hellip;..&nbsp;</small></p>
+
+
+<p><small>&nbsp; At the same time, I had thoughts at the back of my
+head, like if the forum was gonna go down they could at least make a
+torrent of the archive. Now I see why that's not possible, bc of the
+amount of personal stuff on there.
+&hellip;&hellip;&hellip;&hellip;
+I will have to remember as much stuff as I can. Or wait for things to
+finally clear up one day.
+I just reminded myself of smth that happened in 2017 to my favorite who
+passed. I was reading a thread about a younger bandman who talked shit
+to him and he had a fierce reply. "Basically I think a band is
+something (you give your all into?), so those who don't (understand?)
+will disappear." He said something along those lines. But now that
+thread is gone. I read it in February and had a slight fit over it, but
+man....I wish it didn't go private at such a bad time. I think that
+band who talked shit was called Kyogetsu or something.
+I was looking forward to reading the forum again this summer, but
+things have to come to an end. On the flip side, I have found another
+site that talks about lesser known bands but its in polish....I guess I
+will settle for that. It's an old site, but I guess I'll have to settle
+for it.
+I also feel I shouldn't blame myself as much, because I tried very hard
+to read as many threads as I could.&nbsp;</small></p>
+
+
+<p><small>&nbsp; But, there really is too much to go through. Too much
+to read. I knew this, but still tried to read the forum as much as I
+could.
+I remember stumbling across a link to a Merry live (that was apparently
+subbed), but,,,,,I never knew man. I may have PDFs (or maybe I deleted
+them) of one thread that I tried converting to an ereader format so I
+could read it in my spare time.
+But the thing is....Doing that for every thread....
+It's impossible.
+Also, the person said the change is "likely permanent", but....I would
+hope it's not the case. I'm sure I'm not the only person upset about
+this. So I'll have to wait and see in the future if that changes.
+Very depressing....I hate google I guess. I can only hope that it does
+change, because interacting with anyone about this in order to get
+information is going to suck major ass.
+Wish god took me instead of him.
+I'm sorry.</small></p>
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+        
+<div class="content">
+            
+<div class="main-content">
+                
+<h2>I'm sorry @ 10:15 6/6/25</h2>
+
+
+
+                
+<p><small>&nbsp; I'm sorry for writing here,,,,,,, The
+last 3 days have been extremely difficult. It's complicated, but I
+seriously don't know why it's been this terrible. My health isn't
+great, it's been getting worse because of a variety of factors, some
+which is caused by me. But there are other things that contribute to
+why it's so terrible....I've been having coffee/tea. I
+drank too much tea (tried making black tea with lemon and put it in the
+fridge) and that basically gave the headache that I'm still dealing
+with. It's what happens when you have too much caffeine; you have to
+drink more to deal with the withdrawal.&nbsp;</small></p>
+<p><small>&nbsp; Yesterday, I decided to drink
+half and half instead. It was both a good and bad decision. At the time of typing this, I'm
+currently working on my website. I found a great code editor (Phoenix)
+and was having a pretty decent (health sucks tbh) morning. I always
+type things like, "I won't mention anything else". But this is my blog
+after all. So I have to type what happened. I think..... That's just what I'll have to do.
+,,,,,,,,,,,,,,,,,, I keep typing .......... because
+honestly.....there's just a lot I'm feeling right now. Lot of anger,
+self hatred, fear, sadness, grief..... Grief. Downstairs, when I had to
+get away from whatever situation was going on.....I couldn't help but
+think about him, Reita. I wanted to somehow find a pen and paper and
+write down whatever I was feeling. Obviously I could not find a pen or
+a paper, but I felt the strong desire to write whatever I was feeling.
+I wanted to write..."Reita, I miss you. Everyone misses you. The hole
+you've left here in everyone's heart is here."I can't be left alone. I
+want to be left alone. I want to escape. I want to watch him live.....I
+wish I could've. One last time.</small> </p>
+
+
+            </div>
+
+
+        </div>
+
+
+<div class="content">
+            
+<div class="main-content">
+              
+<h3>2024 5/27 letter @ 2025/04/08 5:39 pm </h3>
+
+
+ 
+              
+<p> &nbsp; <small>A fan on Reddit who sent my memorial letter for
+GazettE's memorial live last year deleted her account around April
+2nd-3rd...
+To explain, she had made a post last year saying she would write
+people's letters to give to them on 5/27. I saw that post and gave it
+to her. It was a very emotional exchange...When she had replied to me
+her personal thoughts about what I had written, I couldn't really bring
+myself to reply back to her. At that time, if I had replied to her I
+would've vented everything I had gone through. It would've been so
+long...So I didn't reply that time. I had only given her a heart, and
+decided to cry about everything on my own. I didn't really interact
+much with her. Her account had the default name that they give you when
+you make an account. And I knew she wasn't active and we didn't know
+each other very well, so....I didn't talk to her at all. I was keeping
+up with the many happenings that this band was going through, and I
+felt she was sad too. So I didn't really share my feelings with her
+after that.&nbsp;</small></p>
+
+<p><small>&nbsp; Fast forward a year later (March 30th), around this
+time I decided to return to Tumblr after nearly a month. I did want to
+feel closer to other fans, which is why I made an account on there. But
+I also wanted to read the old radiojack interviews, etc. I wasn't
+thinking when I decided that was a good idea. I mean it kind of is
+right? Only thing is that I can't afford lives, so there's just a big
+gap there. On that day, I was going through a lot. My family doesn't
+respect my boundaries (I had to change the lock on my door, only to
+realize it was useless), I am currently in university and there's so
+many problems. On Reddit, I decided to DM her and ask which box she put
+my letter in. But I did so as politely as I could. I asked her if she
+was active first, then asked her that question. She replied no worries
+but....I don't know what I did.&nbsp;</small></p>
+
+<p><small>&nbsp; Around that time, I was posting a lot. I was venting a
+lot online (publicly) is what I will describe my activity as. So....I
+think I had too much caffeine and apologized to her one more time for
+making her recall last year because I did feel bad. Only a few days
+later, she deleted her account. I noticed it and really felt it was my
+fault, asking her something that any rational person would've asked
+last year. Since that day, I deleted my posts. Another reason I typed
+this up was because before she deleted her account, it seems she
+deleted all her posts as well. I tried to search them, and nothing
+showed up. I should've known this was going to happen, because while
+she did mention her Instagram and Twitter in a post last year, when
+trying to search/access them I couldn't. Maybe she changed her twitter
+handle. her Instagram brought up nothing. So because of that, I decide
+to DM her. Knowing she probably changed her socials because she wanted
+to distance herself, I shouldn't have asked. But for some reason I
+wanted closure. For some reason, I wanted to be a person who clearly
+had things going for me and didn't have to sit in a school for a
+degree. I think the conversation that I had with a family member
+seriously messed me up. That's why I'm acting like this. Because I was
+crying over so much, being broke, stuck in school, no friends, the
+isolation that I felt over the last few years. I was crying and wanted
+at least one person in my life to know who Reita was. Yet all of it
+amounted to nothing. And it caused me to act out. I didn't know what I
+was doing. A simple thing like a letter meant so much to me even a year
+later.</small></p>
+
+
+            </div>
+
+        </div>
+
+<div class="content">
+            
+<div class="main-content">
+              
+<h3>2024/12/30 at 12:42 am</h3>
+
+
+                
+              
+<p> &nbsp; <small>I'm not sure how else to start this off but yeah...I
+guess I finally feel like writing something. Many things happened this
+month. Many. I can't really write everything, but I've done many
+things, such as not using spacehey anymore, taking a break from reddit,
+having a conversation with someone on there and showing them my drawing
+of Reita&hellip;..Other things that happened in that conversation too.
+It's been some days since then, but I still think about it quite a bit.
+I've also not stopped thinking about Reita himself&hellip;.&nbsp;</small></p>
+<p><small>&nbsp; I saw that article recently with someone visiting the
+SNAKEDLOWS store in Japan to pay their respects to his legacy. I
+thought that was really touching, that I wasn't the only fan who had
+him in my thoughts at the end of the year. Also as a HERESY member I
+did check the New Years message that they left. Very emotional. I felt
+like I couldn't write how I felt in that moment on that day and I feel
+a little bad. It was only 2 days ago when it was posted.&nbsp;Also I've
+not been online AT ALL. Not on <small>Tumblr</small>, not on <small>Reddit..</small>..Just pretty inactive for the latter half of this month.&nbsp;</small></p>
+<p><small>&nbsp; As much as I want to feel more connected with fans, I
+feel that I have to put myself first. Many feelings well up inside of
+me because I feel like either my life hasn't truly started in the way I
+want it to, or it already feels like it's ending....Which, believe it
+or not is a feeling that getting back into visual kei has helped me
+curve. Because, it feels like I have something to live for. Kinda sucks
+that I like to record my thoughts on my phone rather than write them
+sometimes. Am i just that scatterbrained?
+I actually was scatterbrained a few weeks ago, around the time I
+decided to make a twitter. That was on the 15th, and you can already
+guess why I made one; to reply to his last tweet this year. Because I
+am in no state to travel at all, I felt it was the only other way to
+express something and feel satisfied with it. I guess being depressed
+or whatever takes many forms?&nbsp;</small></p>
+<p><small>&nbsp; When I'm all scatterbrained, I felt better since I
+wasn't really using my brain all that much to think. But now that that
+period has ended, I once again felt messy. Depressed, angry even.
+Speaking of anger, I feel that things ramped up quite a lot for me in
+personal life over the last few weeks. I would stay in my room to cope,
+but I feel around this time just wasn't the time to do that. Especially
+after reading those new year messages...So I ended up just coping with
+caffeine.
+That aside, as of now I am trying my hardest to get as many scrobbles
+as I can. I didn't care as much because I was really burned out from
+.everything. I numbed my emotions too much maybe. Probably why I'm not
+enjoying as many bands as I would like to. I don't know.
+Also trying to interact with people online is necessary to be in a
+community.</small></p>
+<p><small>&nbsp; I want to keep searching for a place that I could
+someday belong, without it being walled off on a platform I don't like
+at all (discord).
+Finally I would like to leave off by saying I purchased MASS LIMITED
+EDITION BOX B. Stress buying, am I right? It's what happens when your
+family won't respect your physical boundaries. So yeah. Unfortunately
+it was a bit expensive. I thought it was box A but discogs only sells
+box B. And box A is pretty damn expensive on ebay. I won't say the real
+price, because honestly, mass on mercari jp is like 38-40 ish. But
+getting it shipped makes it higher. SMH. That said, I also bought MASS
+because hopefully it'll stop making me collect Gazette stuff since I
+probably have too much of it already! Lol.
+It's already dark and my window is open as I write this. Maybe I'll
+keep scrobbling....I have yet to drink my second cup of green tea.
+Which means that I'll just continue what I'm doing.
+I haven't finished a single video game this year too...Idk. Well, I'm
+gonna sign off here. Goodbye and goodnight. We'll close our eyes and
+the year will finally end sometime soon.
+The last ever picture of him...</small></p>
+
+
+            </div>
+
+        </div>
+
+<div class="content">
+            
+<div class="main-content">
+              
+<h3>Music that I remember listening to @ 2024/08/18 12:10 am</h3>
+
+
+                
+              
+<p> &nbsp;rym stats before I deleted it: <small>(https://files.catbox.moe/sht26p.csv)</small></p>
+<p><small>i managed to delete the ratings. i don't remember everything
+that I've ever listened to but this is mostly everything I remember,
+outside small singles with no release at all on that site which
+would've been a pain to add. Next up I'll also post my decade old
+soundcloud account that I had back when I was in middle school.
+https://soundcloud.com/tealresonance/
+I haven't used it in a very long time, but i guess it's crucial to
+understanding the type of person I was and became. I only logged back
+on because I was trying to find old .lynch radios, but I didn't wanna
+make a new account and decided to use my old one. It's a bit nostalgic
+but also painful....I strayed very far from the person I wanted to be
+during that age. a cool ikemen type LOL enough of that...the very
+dreary present is what I must deal with now.</small></p>
+
+
+            </div>
+
+        </div>
+
+<div class="content">
+            
+<div class="main-content">
+              
+<h3>title</h3>
+
+
+                
+              
+<p> &nbsp; <small>text</small></p>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+    
+    </div>
+
+
+
+</body>
+</html>
